@@ -1,103 +1,112 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+            android:id="@+id/agentImageView1"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/test_bg"
+            android:scaleType="centerCrop" />
+
+    <!-- ScrollView Content -->
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#0E1924">
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="#800E1924"> <!-- Optional semi-transparent overlay -->
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/agent_background"
-                android:orientation="horizontal"
-                android:background="@drawable/ic_launcher_background"
-                android:padding="10dp">
+            <!-- Rest of your layout elements -->
 
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    >
-                <TextView
-                        android:id="@+id/nameTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="28sp"
-                        android:textAllCaps="true"
-                        android:fontFamily="@font/orbitron"
-                        android:textColor="@color/white"
-                        android:textStyle="bold" />
-                <TextView
-                        android:id="@+id/roleTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="11dp"
-                        android:background="@drawable/role_background"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="8dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/agent_background"
+                        android:orientation="horizontal"
+                        android:background="@drawable/ic_launcher_background"
+                        android:padding="10dp">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical">
+                        <TextView
+                                android:id="@+id/nameTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="28sp"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/orbitron"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                        <TextView
+                                android:id="@+id/roleTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="11dp"
+                                android:background="@drawable/role_background"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                            android:id="@+id/agentImageViewl"
+                            android:layout_width="250dp"
+                            android:layout_height="300dp"
+                            android:layout_marginStart="0dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_launcher_foreground"
+                            android:scaleType="fitCenter" />
+                </LinearLayout>
             </LinearLayout>
 
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="//Biography"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:layout_margin="13dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+            <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="2dp" />
 
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="//Special Abilities"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="13dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
 
-            <ImageView
-                    android:id="@+id/agentImageViewl"
-                    android:layout_width="250dp"
-                    android:layout_height="300dp"
-                    android:layout_marginStart="0dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/ic_launcher_foreground"
-                    android:scaleType="fitCenter" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/abilitiesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-
-        </LinearLayout>
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="//Biography"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:layout_margin="13dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="serif" />
-        <TextView
-                android:id="@+id/descriptionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="2dp" />
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="//Special Abilities"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="13dp"
-
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="serif" />
-
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/abilitiesRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</FrameLayout>

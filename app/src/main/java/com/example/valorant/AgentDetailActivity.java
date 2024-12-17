@@ -30,7 +30,7 @@ import java.util.Random;
 
 public class AgentDetailActivity extends AppCompatActivity {
 
-    private ImageView agentImageView;
+    private ImageView agentImageView, backgroundAgentImage;
     private TextView agentNameTextView, agentRoleTextView, agentBiography;
     private RecyclerView abilitiesRecyclerView;
     private LinearLayout agent_background;
@@ -46,6 +46,7 @@ public class AgentDetailActivity extends AppCompatActivity {
 
         // Initialize views
         agentImageView = findViewById(R.id.agentImageViewl);
+        backgroundAgentImage = findViewById(R.id.agentImageView1);
         agentNameTextView = findViewById(R.id.nameTextView);
         agentBiography = findViewById(R.id.descriptionTextView);
         abilitiesRecyclerView = findViewById(R.id.abilitiesRecyclerView);
@@ -95,12 +96,14 @@ public class AgentDetailActivity extends AppCompatActivity {
                     .skipMemoryCache(true) // Skip memory cache
                     .diskCacheStrategy(DiskCacheStrategy.NONE) // Skip disk cache
                     .into(agentImageView);
+
+
             // Re-load the image
 
-
-//            Glide.with(this)
-//                    .load(agent.getFullPortrait())
-//                    .into(agentImageView);
+//
+            Glide.with(this)
+                    .load(agent.getFullPortraitV2())
+                    .into(backgroundAgentImage);
 
 //            Log.d("AgentDetailActivity","Full portrait: " + agent.getFullPortrait());
 
