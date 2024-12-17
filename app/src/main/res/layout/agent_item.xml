@@ -1,0 +1,73 @@
+<!-- res/layout/item_agent.xml -->
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/characterCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <ImageView
+                android:id="@+id/agentImageView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:scaleType="centerCrop" />
+
+        <TextView
+                android:id="@+id/agentNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/russo_one"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/agentDeveloperNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:fontFamily="serif"
+                android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+<!--<LinearLayout-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:layout_width="160dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_margin="6dp"-->
+<!--        android:background="@drawable/layout_background"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="8dp">-->
+
+<!--    <ImageView-->
+<!--            android:id="@+id/agentImageView"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:scaleType="centerCrop" />-->
+
+<!--    <TextView-->
+<!--            android:id="@+id/agentNameTextView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold" />-->
+<!--</LinearLayout>-->

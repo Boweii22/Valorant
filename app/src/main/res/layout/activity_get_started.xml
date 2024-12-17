@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/valorant_img1"
+        tools:context=".GetStartedActivity">
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/white"
+              android:layout_alignParentRight="true"
+              android:layout_margin="15dp"
+              android:fontFamily="sans-serif"
+              android:text="You are given 13 rounds to attack and \ndefend your side with fierce \nmarksman skills and tactical abilities" />
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/valorant_text"
+              android:textColor="@color/white"
+              android:textSize="50sp"
+              android:textStyle="bold"
+              android:layout_above="@id/getStartedBtn"
+              android:text=""
+              android:fontFamily="@font/russo_one" android:layout_marginTop="100dp" android:layout_marginStart="15dp"
+              android:layout_marginEnd="15dp" android:layout_marginBottom="15dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getStartedBtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text="Find your agent"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/get_started_btn" />
+
+</RelativeLayout>
