@@ -25,7 +25,7 @@ A mobile app that allows users to explore and learn about agents in the popular 
 To run this project locally:
 
 1. Clone the repository:
-
+   ```bash
    git clone https://github.com/Boweii22/Valorant.git
 
 2. Open the project in Android Studio.
@@ -36,5 +36,3 @@ To run this project locally:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
